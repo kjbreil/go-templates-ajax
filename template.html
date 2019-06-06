@@ -1,0 +1,38 @@
+<html>
+
+<body>
+    <h2>Posts</h2>
+    {{block "batch" .}}
+        <div id="showMessage">{{.}}</div>
+    {{end}}
+    <form>
+        <label>Message:</label>
+        <input type="text" name="message" id="message"><br />
+        <!-- <input type="submit"> -->
+        <button onclick="submitMessage()">Submit</button>
+    </form>
+    <!-- <button onclick="loadMore()">Load more</button> -->
+    <script>
+        function submitMessage() {
+            console.log("I'm doing stuff")
+            // try {
+            //     console.log(document.getElementById("message").value)
+            // }
+            // catch (err) {
+            //     console.log(err.message)
+            // }
+            // var e = document.getElementById("showMessage");
+            // var xhr = new XMLHttpRequest();
+            // xhr.onreadystatechange = function () {
+            //     if (xhr.readyState == 4 && xhr.status == 200) {
+            //         e.outerHTML = xhr.responseText;
+            //     }
+            // }
+            // // +document.getElementById("message").value
+            // xhr.open("GET", "/submit/"+document.getElementById("message").value, true);
+            // try { xhr.send(); } catch (err) { /* handle error */ }
+        }
+    </script>
+</body>
+
+</html>
