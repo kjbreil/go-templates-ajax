@@ -18,8 +18,7 @@ func main() {
 		var err error
 		switch path.Dir(r.URL.Path) {
 		case "/":
-			err = tmpl.Execute(w, message)
-			fmt.Println("root")
+			err = tmpl.Execute(w, nil)
 		case "/submit":
 			message = path.Base(r.URL.Path)
 			err = tmpl.ExecuteTemplate(w, "batch", message)
